@@ -34,7 +34,7 @@ def add_event(name, description, category):
         return False
     else:
         points = CATEGORY_POINTS.get(category)
-        df_events = df_events.concat({"Event Name": name,
+        df_events = df_events.add({"Event Name": name,
                                       "Event Description": description,
                                       "Category": category,
                                       "Points": points}, ignore_index=True)
